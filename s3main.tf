@@ -8,3 +8,11 @@ resource "aws_s3_bucket" "my-bucket" {
     Environment = "test"
   }
 }
+
+resource "aws_s3_bucket_ownership_controls" "my-bucket" {
+  bucket = aws_s3_bucket.my-bucket.id
+
+  rule {
+    object_ownership = "BucketOwnerPreferred"
+  }
+}

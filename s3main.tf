@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap_southeast-2"
+  region = "ap-southeast-2"
 }
 resource "aws_s3_bucket" "my-bucket" {
   bucket = "my-bucket"
@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "my-bucket" {
 }
 
 resource "aws_s3_bucket_ownership_controls" "my-bucket" {
-  bucket = aws_s3_bucket.my-bucket.id
+  bucket = "my-bucket"
 
   rule {
     object_ownership = "BucketOwnerEnforced"

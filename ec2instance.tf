@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0fc20dd1da406780b"  
+  ami           = "ami-0da25504d467cb134"  
   instance_type = "t2.small"               
   key_name      = "aflorestest"      
   subnet_id     = "subnet-013f88f40e623624b" 

@@ -7,6 +7,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.small"               
   key_name      = "aflorestest"      
   subnet_id     = "subnet-013f88f40e623624b" 
+  iam_instance_profile   = "IAM-EC2-Admin" 
   
   tags = {
     Name = "aflores-test-machine"
